@@ -1,0 +1,29 @@
+eureka:
+  client:
+    service-url:
+      defalutZone: http://eureka-server-1:8761/eureka/,http://eureka-server-2:8762/eureka/
+---
+spring:
+  profiles: 8761
+  application:
+    name: eureka-server-1
+
+server:
+  port: ${spring.profiles}
+
+eureka:
+  instance:
+    hostname: eureka-server-1
+
+---
+spring:
+  profiles: 8762
+  application:
+    name: eureka-server-2
+
+server:
+  port: ${spring.profiles}
+
+eureka:
+  instance:
+    hostname: eureka-server-2
