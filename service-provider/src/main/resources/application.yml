@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: service-provider
+
+server:
+  port: 8085
+
+logging:
+  level:
+    root: INFO
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost2:8761/eureka/,http://localhost3:8762/eureka/
