@@ -1,7 +1,8 @@
 eureka:
   client:
     service-url:
-      defalutZone: http://eureka-server-1:8761/eureka/,http://eureka-server-2:8762/eureka/
+      defaultZone: http://localhost2:8761/eureka/,http://localhost3:8762/eureka/
+
 ---
 spring:
   profiles: 8761
@@ -13,7 +14,7 @@ server:
 
 eureka:
   instance:
-    hostname: eureka-server-1
+    hostname: localhost2
 
 ---
 spring:
@@ -26,4 +27,4 @@ server:
 
 eureka:
   instance:
-    hostname: eureka-server-2
+    hostname: localhost3
